@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Fitness Club</title>
+        <link href="normalize.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="UTF-8">
+        <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!--============= Start Desktop Nav Bar =============-->
+        <nav class="navBar-Desktop">
+
+           <a href="#banner"> 
+            <h1 class="logo">
+                <span style= "color:#fbb023">FIT</span>NESS <span style="font-size:25px ; color: #fbb023 ; font-weight: bold"><i class=
+                "fas fa-check"></i></span>
+            </h1> </a>
+
+            <ul class="mainList">
+                <li onmouseover="hideMenu()"> <a href="#" onclick="showModel()">Health Tool</a> </li>
+                <li onmouseover="hideMenu()"> <a href="#features">Features</a> </li>
+                <li id="list" onmouseover="showSublist()"> <a href="#">Classes <img id="arrow" src="https://i.ibb.co/Yf6XvDP/Arrow.png"
+                    width="11px"></a>
+                </li>
+                <li onmouseover="hideMenu()"> <a href="#team">Our Team</a></li>
+                <li onmouseover="hideMenu()"><a href="#frm">Contact Us</a> </li>
+            </ul>
+
+
+            <div class="subList" id="sub-list" onmouseleave="hideMenu()">
+                <ul>
+                    <li> <a href="#current">Current Classes</a> </li>
+                    <li>  <a href="#virtualClass">Future Classes</a> </li>
+                </ul>
+            </div>
+
+        </nav> <!--============= End Desktop Nav Bar =============-->
+
+
+        <!--============= Start Mobile Nav Bar =============-->
+        <nav class="navBar-mobile">
+
+            <h1 class="logo" id="logomobile"> <span style="color:#fbb023">FIT</span>NESS<span style="font-size:15px ; color: white ; font-weight: bold"> 
+              <i class="fas fa-check"></i></span>
+            </h1>
+
+            <div class="icon-burger" for="nav-toggle" id="burger" onclick="showMobileMenu(this)">
+                <div class="line line1"></div>
+                <div class="line line2"> </div> 
+                <div class="line line3"></div>
+            </div>
+
+            <ul class="mainList-Mobile">
+                <div class = "list">
+                <li> <a href="#frm">Contact Us</a> </li>
+                 <li> <a href="#team">Our Team</a></li>
+                 <li id="toggle-icon"> <a href="#">Classes <img id="arrowM" src="https://i.ibb.co/Yf6XvDP/Arrow.png"
+                    width="10px"></a>
+                </li>
+                    <div class="subList-Mobile" id="sub-list-Mobile">
+                        <ul>
+                            <li> <a href="#current">Current Classes</a></li>
+                             <li> <a href="#virtualClass" >Future Classes</a> </li>
+                        </ul>
+                    </div>
+                <li onclick="showModel()" > <a href="#">Health tool</a> </li>
+            </div>
+            </ul>
+
+        </nav> <!--============= End Mobile Nav Bar =============-->
+
+
+        <!--============= Start Dektop Header secation =============-->
+        <header class="banner"  id="banner">
+            <div class="overlay"> </div>
+            <video autoplay loop muted playsinline id="nike" loop><source src="gym.mp4" type="video/mp4"></video>
+            <div class="caption">
+                <h1 class="mainhead"> Fitness Club  </h1>
+                <h2 class="subhead">WHERE LUXURY MEETS FITNESS </h2>
+                <button class="mainbtn" type="button" onclick="showPopUp()">Join Us!</button>
+            </div>
+        </header> <!--============= End Dektop Header secation =============-->
+
+
+        <div class="popup"> 
+            <div class="popup-content"> 
+                <div class="userimg">
+                    <i class="fas fa-user-alt fa-2x"></i>
+                    <h3> Reigster </h3>
+                    <span class="closeRegiter">&times;</span>
+                </div>
+
+                <form class="Register">
+                    <p class = "error1"> message1 </p>
+                    <input type="text" name="name" placeholder="Username*" id ="uname" class="regiterform1" autofocus required>  
+                    <input type="email" name="email" placeholder="Email*"  pattern=".+@gmail.com"  class=" regiterform1" id = "uemail"  required >
+                    <input type="password" name="pass" placeholder="Password*"  id = "pass" class= "regiterform1"  required >
+                    <span id="eye" class="fas fa-eye"></span>                    
+
+                    <input type="password" name="repass" placeholder="Repeat-Password*" id = "checkpass" class= "regiterform1"  required> 
+                    <span id="eye2" class="fas fa-eye"></span>                    
+
+                    
+                    <input type="submit" value="Register" name= "register"  id = "registerr" onclick ="check()">
+
+                </form>
+            </div>
+        </div>
+
+
+              <!--============= Start Mobie Header secation =============-->
+        <header class="banner-mobile" id="bannerBlur">
+            <div class="caption">
+                <h3 class="mainhead"> Fitness Club </h3>
+                <h5 class="subhead"> WHERE LUXURY MEETS FITNESS </h5>
+                <button class="mainbtn" type="button" onclick="showPopUp()">Join Us</button>
+            </div>
+        </header> <!--============= End Mobie Header secation =============-->
+
+
+           <!--============= Start About secation =============-->
+        <div class = "about"> 
+
+            <div class= "left-section"> 
+                <img src="run.png" width="40%">
+                <h1> All <span style="color:#153e5c ; text-decoration: underline"> About</span> <br> Fitness Club</h1>
+            </div>
+
+            <div class= "right-section">
+
+            <div class ="item">
+                <img src="img/yoga.svg" width="10%"> 
+                <div class = "content">
+                    <h4> Yoga</h4>
+                    <p>Yoga is a mind and body practice with a 5,000-year history in ancient Indian philosophy. 
+                    Various styles of yoga combine physical postures.</p>
+                </div> 
+            </div>
+
+                <div class ="item">
+                        <img src="img/boxing.svg" width="10%"> 
+                        <div class = "content">
+                            <h4>Boxing</h4>
+                            <p>Boxing is a combat sport in which two people, usually wearing protective gloves and other
+                             protective equipment such as hand wraps.</p>
+                        </div> 
+                 </div>
+
+                    <div class ="item">
+                            <img src="img/running.svg" width="10%"> 
+                            <div class = "content">
+                                <h4>Running</h4>
+                                <p>Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot. 
+                                    Running is a type of gait characterized by an aerial phase.</p>
+                            </div> 
+                    </div>
+     
+            </div> <!-- End Right secation -->
+        </div> <!--============= End About secation =============-->
+
+        <h2 class= "head2" id="features"> We Are More Than Fitness</h2>
+
+        <div class="continaer-features"> <!--============= Start Container feature =============-->
+            <div class="box-feature">
+                <img src="https://i.ibb.co/VSMqJDy/Evox-Clubs-2.jpg"> 
+                <div class="desc">
+                    <h2>
+                        Profissional Equipment
+                    </h2>
+                    <p>
+                        We've got a large range of professional gym equipment to cover all your fitness goals
+                    </p>
+                </div>
+            </div> <!--End Box1-->
+
+
+                <div class="box-feature">
+                        <img src="https://images.pexels.com/photos/4553611/pexels-photo-4553611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> 
+                        <div class="desc">
+                            <h2>
+                                Understanding your busy life
+                            </h2>
+                            <p>
+                                even if you had a busy day, you don't have an excuse to skip your daily training
+                            </p>
+                        </div>
+                    </div> <!--End Box2-->
+
+                    <div class="box-feature">
+                            <img src="https://images.pexels.com/photos/4662344/pexels-photo-4662344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> 
+                            <div class="desc">
+                                <h2>
+                                    Variety of Classes
+                                </h2>
+                                <p>
+                                    More than 120 group exercise classes per week
+                                </p>
+                            </div>
+                        </div> <!--End Box3-->
+
+                    <div class="box-feature">
+                            <img src="https://images.pexels.com/photos/4056614/pexels-photo-4056614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> 
+                            <div class="desc">
+                                <h2>
+                                    A community that suits you
+                                </h2>
+                                <p>                     
+                                    From the luxurious facilities to the highest standards of cleanliness, we work day and night to take care of every single detail
+                                </p>
+                            </div>
+                        </div> <!--End Box4-->
+
+                        <div class="box-feature">
+                                <img src="https://images.pexels.com/photos/4327012/pexels-photo-4327012.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"> 
+                                <div class="desc">
+                                    <h2>
+                                        A community that suits you
+                                    </h2>
+                                    <p>                     
+                                        From the luxurious facilities to the highest standards of cleanliness, we work day and night to take care of every single detail
+                                    </p>
+                                </div>
+                            </div> <!--End Box5-->
+
+                            <div class="box-feature">
+                                    <img src="https://i.ibb.co/Jv2ZYNk/FIT-FOREVER-FITNESS-10.png"> 
+                                    <div class="desc">
+                                        <h2>
+                                            Achieving Goals
+                                        </h2>
+                                        <p>                     
+                                            We discuss your goals and work with you to achieve them starting from your very first appointment with our trainer
+                                        </p>
+                                    </div>
+                                </div> <!--End Box6-->
+        </div> <!--============= End Container Feature  =============-->
+
+
+
+        <div class = "titleTrainer"> 
+            <h2 class= "head2" id="team"> Our <span class="specail">E</span> <span style="color:#153e5c">xpert </span>Trainers</h2>
+         </div>
+           <!--============= Start About Trainer secation =============-->
+        <div class = "about-trainer"> 
+
+            <div class="card-trainer">
+                    <div class="name">
+                        <img src="img/traniner3.png" width="43%"> https://www.instagram.com/junior_turbo/
+                        <h3>Sara </h3>
+                    </div>
+
+                    <div class="breif">
+                        <p>My fitness journey started with Fitness First Burjuman (BJC) in 2008.
+                         It was love at first sight for me, what with the spacious interiors and the warmth of the support staff. I was hooked onto all the Group Exercise
+                        classes from day one because of one man- Paulo Roehl Dela Cruz.</p>
+                        <a href="https://www.instagram.com/trainerluc/" target="_blank" >Visit Instagram Profile</a>
+                    </div>
+                </div> <!--End card1-->
+
+                <div class="card-trainer">
+                        <div class="name">
+                            <img src="https://herfitness.in/wp-content/uploads/2019/05/WEB-BANNER-2.jpg" width="43%">
+                            <h3>Emily</h3>
+                        </div>
+                        
+                        <div class="breif">
+                            <p> personal trainer, a well-known CrossFit Coach, an online female fitness trainer, and an inspiring nutritional therapy practitioner. She is using her experience and knowledge to
+                             change people’s views and misconceptions about food, body, and weightlifting.</p>
+                            <a href="https://www.instagram.com/smile_panjapa/" target="_blank">Visit Instagram Profile</a>
+                        </div>
+                </div> <!--End card2-->
+
+                    <div class="card-trainer">
+                            <div class="name">
+                                <img src="https://pbs.twimg.com/media/D8z_NjyWsAIefUA.jpg" width="43%">
+                                <h3>Tanya Poppett</h3>
+                            </div>
+                            <div class="breif">
+                                <p> I am a famous Male fitness trainer from Sydney.
+                                    She is an entrepreneur who has scaled her knowledge to 
+                                     the level in which she has helped thousands of individuals achieve their fitness goals.</p>
+                                <a href="https://www.instagram.com/junior_turbo/" target="_blank">Visit Instagram Profile</a>
+                            </div>
+                    </div> <!--End card3-->
+
+        </div> <!--============= End About Trainer secation =============-->
+
+
+    <!--============= Start Classes secation =============-->
+    <h2 class="head2" id="current"> Current Classes</h2>
+    <div class= "classes"> </div> <!--============= End Classes secation =============-->
+
+    <div class= "virtual" id="virtualClass"> 
+        <h2 class="head2" id="text-move"> Have you ever imagined youerself cycling in a fantsy world or futuirtic cities ? </h2>
+        <video width="50%" height="460px" controls id="ride">
+            <source src="Ride.mp4" type="video/mp4">
+        </video>
+    </div> <!--============= End virtual secation =============-->
+
+
+     <!------------ The Main Modal ------------>
+    <div class="modal" id="myModal">
+        <div class="modal-content">  <!------ Modal content ------->
+              <span class="close">&times;</span>
+               <div class="measurement-BMI"> <!-------BMI Content-------->
+
+                <div class = "left-BMI"> <!-- Top part of left section -->
+                        <div id="scale_main">
+                                <div id="scale_display">
+                                <h4 id="range" class="neutral">BMI</h4>
+                                <h3 id="bmi" >----</h39>
+                                <div id="needle"></div>
+                            </div>
+                         </div>
+                        <div class = "uerInfo"> <!-- Bottom part of left section -->
+                                <label for="weight" class="weight-label">Weight (kg):</label>
+                                <input type="number" name="weight" id="weight-input">
+                                <label for="weight">Height (m):</label>
+                                <input type="number" name="height" id="height-input">
+                                <button type="button" id = "Calculate" onclick ="calculateBMI()"> Calculate </button>
+                        </div> <!--- End user Info -->
+                 </div> <!-- End Left  BMI -->
+                   
+                <div class = "right-BMI">
+                    <p class = "result"> Body mass index is a value derived from the mass (weight) and height of a person it help you to know if you are healthy or not and check your family also! <a href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html" target="_blank"> <br> Read more</a> </p>
+                    <p class = "result-weight"></p>
+                    <p class = "result-height"></p>
+                    <p class = "about-BMI"></p>
+                </div> <!--End Right  BMI-->
+         </div> <!--End BMI Content-->
+
+        </div><!----End model content----->
+    </div> <!---------End main Model------------->
+
+
+    <div class="container-footer">
+        <!--  Google map section -->
+		<div class="map-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14485.52764444237!2d46.6454333!3d24.8166098!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3e1b13e640fdc417!2sFIT%20FOREVER%20FITNESS!5e0!3m2!1sar!2ssa!4v1609749934134!5m2!1sar!2ssa" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+
+            <form class = "contcat-us" id="frm">
+                <h2 class="contact-head"> Contact Us</h2>
+                <p class="error">  </p>
+                <input type="text" class = "contact-items" id="fname" name="username" placeholder="Your name*" required>
+                <input type="email" name="emaill" id="email" class = "contact-items" placeholder="example@gmail.com*" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                <textarea id="subject" name="subject" id = "contact-text" class = "contact-items" placeholder="Write your message" required></textarea>
+                <input type="submit" value="Submit"  onclick="verfiy()" id="submitt">
+            </form>
+          </div>
+
+          
+    <div class="last-section">
+
+        <div class="location-footer">
+            </h4> <i class="fas fa-map-marker-alt"></i> &nbsp; Location </h4>
+            <p class="last-section-location">Saudi Arabia - Riyadh - Alyasmen </p>
+        </div> 
+
+            <div class="social-media">
+                <h4> <i class="far fa-comment-alt"></i> &nbsp; Get Touch With Us</h4>
+                <div class="icon-socail">
+                    <a href="https://www.facebook.com/FitnessTimeSA/"target="_blank"> <i class="fab fa-facebook-square fa-2x "></i> </a>
+                    <a href="https://twitter.com/ftladies?lang=ar"target="_blank"> <i class="fab fa-twitter-square fa-2x "> </i> </a>
+                    <a href="https://www.instagram.com/f4fksa/"target="_blank"><i class="fab fa-instagram fa-2x "></i> </a>
+                    <a href="https://www.snapchat.com/add/fit4everfitness"target="_blank"><i class="fab fa-snapchat-square fa-2x"></i> </a>
+                    <a href="mailto:Team@FitnessClub.com"target="_blank"><i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="about-footer">
+                <h4> <i class="far fa-clock"></i> &nbsp; Our Working Hours:</h4>
+                <p class="last-section-text"> Sunday to Thursday: 06:00 am - 11:00 pm<br> Friday & Saturday: 11:00 am - 09:00 pm.</p>
+            </div>
+
+        </div> <!-- End Last section -->
+
+        <footer>
+            <p>Made with <span style="color: #e25555;">&hearts;</span> by Awesome Developer &#128105; </p>
+        </footer>
+
+        <a href="#banner" id="top"> <span style="color:#fbc052"><i class="fas fa-arrow-alt-circle-up fa-2x"></i> </span> </a>
+        <a href="#bannerBlur" id="topMobile"> <span style="color:#fbc052"><i class="fas fa-arrow-alt-circle-up fa-2x"></i> </span> </a>
+
+       <script src="main.js"></script>
+
+    </body>
+</html>
